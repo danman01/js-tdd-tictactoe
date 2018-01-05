@@ -1,3 +1,8 @@
 {
-  "all": ["<%= paths.src.spec %>"]
+  "all": ["<%= paths.src.spec %>"],
+  "options": {
+    "phantomConfig": {
+      "--web-security": false
+    }
+  }
 }

@@ -7,12 +7,19 @@
     <div id="mocha"></div>
     <script src="../node_modules/mocha/mocha.js"></script>
     <script src="../node_modules/chai/chai.js"></script>
+    <script src="../node_modules/chai-http/dist/chai-http.js"></script>
     <script>
       mocha.ui('bdd')
+      mocha.reporter('html')
+      chai.use(chaiHttp) 
+      
+      var expect = chai.expect
       var should = chai.should()
     </script>
-    <script src="../assets/scripts/example.js"></script>
+    <script src="../assets/scripts/index.js"></script>
+
     <script src="example.spec.js"></script>
+    <script src="ticTacToe.spec.js"></script>
     <script>
       mocha.run()
     </script>
