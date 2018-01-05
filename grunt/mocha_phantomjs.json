@@ -1,6 +1,7 @@
 {
   "all": ["<%= paths.src.spec %>"],
   "options": {
+    "reporter": "nyan",
     "phantomConfig": {
       "--web-security": false
     }
