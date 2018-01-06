@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- encoding must be set for mocha's special characters to render properly -->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+  </head>
+  <body>
+    <div id="myDiv">Hello World!</div>
+    <div id="app">
+      <h1>TicTacToe</h1>
+
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.</p>
+      <button id="signUpButton">Sign Up!</button>
+
+    </div>
+    <div id="mocha"></div>
+    <script src="../node_modules/mocha/mocha.js"></script>
+    <script src="../node_modules/chai/chai.js"></script>
+    <script src="../node_modules/chai-http/dist/chai-http.js"></script>
+    <script>
+      mocha.ui('bdd')
+      mocha.reporter('html')
+      chai.use(chaiHttp) 
+      
+      var token = ''
+      var expect = chai.expect
+      var should = chai.should()
+    </script>
+    <script src="../assets/scripts/index.js"></script>
+
+    <script src="example.spec.js"></script>
+    <script src="ticTacToe.spec.js"></script>
+    <script>
+      if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
+      else { mocha.run(); }
+    </script>
+  </body>
+</html>

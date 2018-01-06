@@ -5,8 +5,9 @@ var server = 'http://localhost:4741/'
 var credentials = { credentials: {password: '123', password_confirmation: '123', email: 'test123@gmail.com' }}
 var token;
 describe('Home Page', function() {
+  const signUpButton = document.getElementById('signUpButton')
   it('should have a sign up button', function(){
-    var signUpButton = document.getElementById('signUpButton')
+    // hrmm can't put DOM elements in 'it' blocks apparently
     (signUpButton.innerHTML).should.equal('Sign Up!')
   })
   it('should have a sign in button');
